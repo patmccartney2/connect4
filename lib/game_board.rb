@@ -31,6 +31,7 @@ class GameBoard
     @board.each do |row|
     grid << row.join
     return grid
+    end
   end
 
 
@@ -49,8 +50,10 @@ class GameBoard
       5
     elsif column == "G"
       6
+      end
     end
   end
+
 
   def placement(column, piece)
     index = convert_input_aplha_to_num(column)
@@ -73,7 +76,7 @@ class GameBoard
         @board[1].delete_at(index)
         @board[1].insert(index, piece.representation)
       end
-    end
-  end
+
+
 
 end
